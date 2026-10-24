@@ -6,8 +6,16 @@ https://github.com/earendil-works/pi/tree/main/packages/durable
 
 ```shell
 source .env
-watchexec -c -w src "node src/[module]"
+watchexec -c -w src "node src/[module]/main.mjs"
 ```
+
+Each experiment lives in its own directory with a `main.mjs` and a `README.md`
+containing the entities and a Mermaid diagram for that example.
+
+- [`src/000-quickstart`](src/000-quickstart/README.md)
+- [`src/00-conversation`](src/00-conversation/README.md)
+- [`src/01-documents`](src/01-documents/README.md)
+- [`src/02-forks`](src/02-forks/README.md)
 
 ## Datamodel
 
