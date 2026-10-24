@@ -38,7 +38,7 @@ const Notes = defineDoc({
   checkpointWhen: () => false,
   kind: "example.notes",
   version: 1,
-  scope: "conversation",
+  scope: "conversation", // only 1 conversation-level at a time
   history: "rewindable",
   fork: "asOf",
   initial: () => ({ text: "" }),
@@ -56,10 +56,6 @@ const firstEntry = await session.commit(async (tx) => {
   const entry = await tx.appendEntry(chat.id, { kind: "note", data: "hello" });
   const doc = await tx.doc(Notes, chat.id);
   doc.text = `doc with entry: '${entry.data}'`;
-  const d2 = await tx.doc(Notes, chat.id);
-  doc.text = `y: '${entry.data}'`;
-  const d3 = await tx.doc(Notes, chat.id);
-  doc.text = `z: '${entry.data}'`;
 
   logTree("append entry to session", entry, doc.text);
 
