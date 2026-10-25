@@ -16,6 +16,7 @@ containing the entities and a Mermaid diagram for that example.
 - [`src/00-conversation`](src/00-conversation/README.md)
 - [`src/01-documents`](src/01-documents/README.md)
 - [`src/02-forks`](src/02-forks/README.md)
+- [`src/03-owned-conversations`](src/03-owned-conversations/README.md)
 
 ## Datamodel
 
